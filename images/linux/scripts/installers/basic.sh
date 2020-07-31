@@ -11,6 +11,7 @@ source $HELPER_SCRIPTS/os.sh
 set -e
 
 common_packages="dnsutils
+                 systemd
                  iproute2
                  iputils-ping
                  libunwind8

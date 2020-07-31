@@ -46,7 +46,9 @@ DocumentInstalledItem "Git Large File Storage (LFS) ($(git-lfs --version 2>&1 | 
 DocumentInstalledItem "Git-ftp ($(git-ftp --version | cut -d ' ' -f 3))"
 
 #Install hub
-snap install hub --classic
+# snap install hub --classic
+# brew install github/gh/gh
+apt-get install -y --no-install-recommends hub
 if command -v hub; then
     echo "hub CLI was installed successfully"
     DocumentInstalledItem "Hub CLI ($(hub --version | grep "hub version" | cut -d ' ' -f 3))"
