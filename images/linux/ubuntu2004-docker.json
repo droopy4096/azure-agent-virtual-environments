@@ -10,7 +10,8 @@
         "go_default": "1.14",
         "go_versions": "1.14",
         "mysql_root_password": "mysqlroot",
-        "homebrew_prefix": "/usr/local"
+        "homebrew_prefix": "/usr/local",
+        "container_repository": "packer-agent"
     },
     "sensitive-variables": ["client_secret", "github_feed_token"],
     "builders": [
@@ -274,7 +275,7 @@
     "post-processors": [
         {
             "type": "docker-tag",
-            "repository": "packer-agent",
+            "repository": "{{ user `container_repostory` }}",
             "tag": "latest"
         }
     ]
