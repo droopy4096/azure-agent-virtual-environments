@@ -16,4 +16,4 @@ pr:
 jobs:
 - job: build_container
   steps:
-    - bash: packer build -var github_feed_token="${{ github_feed_token }}" ubuntu2004-docker.json
+    - bash: packer build -var github_feed_token="$(github_feed_token)" ubuntu2004-docker.json
