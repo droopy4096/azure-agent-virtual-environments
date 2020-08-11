@@ -25,7 +25,7 @@ jobs:
     - task: Docker@2
       inputs:
         command: push
-        repository: $(container_repository_base)/$(container_repository_name)
+        repository: $(container_repository_name)
         containerRegistry: $(container_registry_connection)
         tags: |
           $(Build.SourceBranchName)
