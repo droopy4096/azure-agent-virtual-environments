@@ -11,6 +11,8 @@ rm -rf /tmp/*
 # after cleanup
 after=$(df / -Pm | awk 'NR==2{print $4}')
 
+( cd / ; rm -rf get-pip.py minikube-linux-amd64 packages-microsoft* phantomjs session-manager* )
+
 # display size
  echo "Before: $before MB"
  echo "After : $after MB"
