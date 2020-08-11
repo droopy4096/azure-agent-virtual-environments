@@ -275,8 +275,8 @@
     "post-processors": [
         {
             "type": "docker-tag",
-            "repository": "{{ user `container_repostory` }}",
-            "tag": "latest"
+            "repository": "{{ user `container_repository` }}",
+            "tags": "latest"
         }
     ]
 }
