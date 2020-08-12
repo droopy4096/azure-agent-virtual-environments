@@ -266,7 +266,7 @@
         },
         {
             "type": "file",
-            "source": "{{template_dir}}/scripts/helpers/container-start.sh.conf",
+            "source": "{{template_dir}}/scripts/helpers/container-start.sh",
             "destination": "/azp/start.sh"
         },
         {
