@@ -265,6 +265,13 @@
             "destination": "/tmp/"
         },
         {
+            "type": "shell",
+            "inline": [
+                "mkdir -p /azp"
+            ],
+            "execute_command": "sh -c '{{ .Vars }} {{ .Path }}'"
+        },
+        {
             "type": "file",
             "source": "{{template_dir}}/scripts/helpers/container-start.sh",
             "destination": "/azp/start.sh"
