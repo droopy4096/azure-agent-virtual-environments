@@ -16,7 +16,7 @@ pr:
 jobs:
 - job: build_container
   steps:
-    - bash: packer build -var github_feed_token="$(github_feed_token)" -var "container_repository=$(container_repository_base)/$(container_repository_name)" -var "container_tag=$(Build.SourceBranchName)" ubuntu2004-docker.json
+    - bash: packer build -var github_feed_token="$(github_feed_token)" -var "container_repository=$(container_repository_base)/$(container_repository_name)" -var "container_tags=$(Build.SourceBranchName)" ubuntu2004-docker.json
       workingDirectory: images/linux
     - task: Docker@2
       inputs:
