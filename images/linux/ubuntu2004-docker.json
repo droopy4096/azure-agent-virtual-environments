@@ -265,6 +265,11 @@
             "destination": "/tmp/"
         },
         {
+            "type": "file",
+            "source": "{{template_dir}}/scripts/helpers/container-start.sh.conf",
+            "destination": "/azp/start.sh"
+        },
+        {
             "type": "shell",
             "inline": [
                 "mkdir -p /etc/vsts",
