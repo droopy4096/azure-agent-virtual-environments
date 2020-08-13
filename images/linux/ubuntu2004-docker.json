@@ -267,7 +267,8 @@
         {
             "type": "shell",
             "inline": [
-                "mkdir -p /azp"
+                "mkdir -p /azp",
+                "touch /var/run/docker.sock"
             ],
             "execute_command": "sh -c '{{ .Vars }} {{ .Path }}'"
         },
